@@ -16,7 +16,7 @@ public class HumanPlayer implements Player{
             try {
                 number = Long.parseLong(scan.nextLine());
             }catch (Exception e){
-                _log.log("Error ! Message : "+e.getMessage());
+                _log.log("Error occurred. message : "+e.getMessage());
             }
         }
 
@@ -27,11 +27,11 @@ public class HumanPlayer implements Player{
     @Override
     public void respond(boolean lowerOrGreater) {
         if(lowerOrGreater){
-            _log.log("The guess number is lower !");
-            System.out.println("The guess number is lower !");
+            _log.log("The number given by the user is greater than the guess");
+            System.out.println("The number given by the user is greater than the guess");
         }else{
-            _log.log("The guess number is greater");
-            System.out.println("The guess number is greater");
+            _log.log("The number given by the user is greater than the guess");
+            System.out.println("The number given by the user is lower than the guess");
         }
     }
 }

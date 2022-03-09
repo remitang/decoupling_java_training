@@ -4,9 +4,9 @@ public class CompositeLogger implements Logger{
     private Logger firstLog;
     private Logger secondLog;
 
-    public CompositeLogger(Logger first, Logger second){
+    public CompositeLogger(Logger first, Logger seconde){
         firstLog = first;
-        secondLog = second;
+        secondLog = seconde;
     }
 
     @Override

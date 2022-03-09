@@ -33,7 +33,7 @@ public class Simulation {
         }else if (value < numberToGuess){
             player.respond(true);
         }else{
-            logger.log("The number is founded !");
+            logger.log("The player found the number");
             return true;
         }
         return false;
@@ -50,17 +50,17 @@ public class Simulation {
             if(nextRound()){
                 break;
             }
-        }while(cmp++ <= count);
+        }while(cmp++<=count);
         long end = System.currentTimeMillis();
         Date elapsed = new Date(end-start);
         DateFormat formatter = new SimpleDateFormat("mm:ss.SSS");
 
         if(cmp >= count){
-            logger.log("The guess number is " + cmp + " loop and "+formatter.format(elapsed));
-            System.out.println("The guess number is founded by the user in "+formatter.format(elapsed));
+            logger.log("The user has found the number guess in "+cmp+" loop and "+formatter.format(elapsed));
+            System.out.println("You have found the number in "+formatter.format(elapsed));
         }else{
-            logger.log("The guess number is not founded in "+cmp+" loop and "+formatter.format(elapsed));
-            System.out.println("The guess number is not founded by the user in "+formatter.format(elapsed));
+            logger.log("The user has not found the number guess in "+cmp+" loop and "+formatter.format(elapsed));
+            System.out.println("You have not found the number in "+formatter.format(elapsed));
         }
     }
 }

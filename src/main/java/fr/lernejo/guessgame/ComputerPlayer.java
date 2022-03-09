@@ -36,6 +36,6 @@ public class ComputerPlayer implements Player{
     @Override
     public void respond(boolean lowerOrGreater) {
         isGreater = lowerOrGreater;
-        _log.log("Value "+prev+" is "+ (lowerOrGreater ? "greater" : "lower" + " than the secret number"));
+        _log.log("Value "+prev+" is "+(lowerOrGreater?"greater":"lower"+" than guess"));
     }
 }
